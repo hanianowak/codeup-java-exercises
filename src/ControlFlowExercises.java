@@ -153,17 +153,18 @@ public class ControlFlowExercises {
         System.out.println("you want to convert your grade?");
         boolean dec2 = scanner.nextBoolean();
 
-            while(dec2==true) {
-                System.out.println("enter your grade (0-100)");
-                int grade = scanner.nextInt();
+        while (dec2 == true) {
+            System.out.println("enter your grade (0-100)");
+            int grade = scanner.nextInt();
 
-                if (grade <= 0 && grade <= 59) {
+            if (grade >= 0 && grade <= 100) {
+                if (grade <= 59) {
                     System.out.println("you got F :(");
-                } else if (grade <= 60 && grade <= 66) {
+                } else if (grade <= 66) {
                     System.out.println("you got D");
-                } else if (grade <= 67 && grade <= 79) {
+                } else if (grade <= 79) {
                     System.out.println("you got C");
-                } else if (grade <= 80 && grade <= 87) {
+                } else if (grade <= 87) {
                     System.out.println("you got B :(");
                 } else {
                     System.out.println("you got A!");
@@ -171,5 +172,7 @@ public class ControlFlowExercises {
                 System.out.println("do you have more grades?");
                 dec2 = scanner.nextBoolean();
             }
+        }
+        
     }
 }
