@@ -150,10 +150,10 @@ public class ControlFlowExercises {
 //        F : 59 - 0
 
 
-        System.out.println("you want to convert your grade?");
-        boolean dec2 = scanner.nextBoolean();
+        
+        boolean dec2 = true;
 
-        while (dec2 == true) {
+        while (dec2) {
             System.out.println("enter your grade (0-100)");
             int grade = scanner.nextInt();
 
