@@ -14,23 +14,32 @@ public class Bob {
 
 
         boolean dec2 = true;
+        Scanner scanner = new Scanner(System.in);
 
-         System.out.println("Say something to Bob");
+        System.out.println("Say something to Bob");
 
 
         while(dec2) {
-            Scanner scanner = new Scanner(System.in);
             String message = scanner.nextLine();
 
             if (message.endsWith("?")) {
                 System.out.println("Sure.");
             } else if (message.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (message.equals(" ")) {
+            } else if (message.equals("")) {
                 System.out.println("Fine. Be that way!");
             } else {
                 System.out.println("Whatever");
             }
         }
+
+
+        String WhatYouSaying = scanner.nextLine();
+
+    
+
+
+
+
     }
 }
