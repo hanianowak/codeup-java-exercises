@@ -56,7 +56,7 @@ public class Input {
 
          do {
              System.out.println("Enter double");
-             input = scanner.nextInt();
+             input = scanner.nextDouble();
          } while (input >= min && input <= max);
          return input;
      }
@@ -65,7 +65,7 @@ public class Input {
     public static double getDouble(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter double");
-        double input = scanner.nextInt();
+        double input = scanner.nextDouble();
         return input;
     }
 }
