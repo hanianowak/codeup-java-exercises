@@ -3,25 +3,18 @@ package util;
 public class InputTest {
     public static void main(String[] args) {
 
-        Input cos = new Input();
-        cos.getString();
+        Input input = new Input();
 
-        Input cos2 = new Input();
-        boolean coscos = cos2.yesNo();
-        System.out.println(coscos);
+        System.out.println(input.getString());
 
-        Input cos3 = new Input();
-        cos3.getInt(4,10);
+        System.out.println(input.yesNo());
 
+        System.out.println(input.getInt(4, 10));
 
-        Input cos4 = new Input();
-        cos4.getInt();
+        System.out.println(input.getInt());
 
-        Input cos5 = new Input();
-        cos5.getDouble(3, 200);
+        System.out.println(input.getDouble(3, 200));
 
-        Input cos6 = new Input();
-        cos6.getDouble();
-
+        System.out.println(input.getDouble());
     }
 }
