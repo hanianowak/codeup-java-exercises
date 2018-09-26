@@ -26,7 +26,7 @@ public class Input {
         return (answer.equals("yes") || answer.equals("y"));
     }
 
-    int getInt(int min, int max) {
+    public int getInt(int min, int max) {
         int input;
         do {
             System.out.println("Enter integer");
@@ -36,8 +36,8 @@ public class Input {
 
     }
 
-    int getInt() {
-        System.out.println("Enter integer");
+    public int getInt() {
+//        System.out.println("Enter integer");
         int input = scanner.nextInt();
         return input;
 

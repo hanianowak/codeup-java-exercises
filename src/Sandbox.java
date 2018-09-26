@@ -8,9 +8,9 @@ public class Sandbox {
         for (int num:numbers) System.out.print(num + " ");
         System.out.println();
         for (int num:reverse(numbers)) System.out.print(num + " ");
+        countUp(7);
 
     }
-
 
 
     public static int countDown(int input) {
@@ -22,6 +22,20 @@ public class Sandbox {
             return 0;
         }
     }
+    
+
+
+    public static int endAmount;
+//    public int base = 0;
+
+    public static int countUp(int x) {
+        if (x > endAmount) return 0;
+        else {
+            System.out.println(x);
+            return countUp(x+1);
+        }
+    }
+
 
 
     public static int[] reverse(int[] nums) {
