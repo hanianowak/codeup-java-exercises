@@ -24,16 +24,28 @@ public class Student {
     }
 
     // returns the average of the students grades
-    public double getGradeAverage() {
-        double sum = 0;
+//    public double getGradeAverage() {
+//        double sum = 0;
 //        if (!grades.isEmpty()) {
-            for (int grade : this.grades) {
-                sum += grade;
-            }
-            return sum / this.grades.size();
-        }
+//            for (int grade : this.grades) {
+//                sum += grade;
+//            }
+//            return sum / this.grades.size();
+//        }
 //        return sum;
 //    }
+
+    public double getGradeAverage() {
+        if (grades.isEmpty()) {
+            return 0;
+        }
+
+        double sum = 0;
+        for (int grade : this.grades) {
+            sum += grade;
+        }
+        return sum / this.grades.size();
+    }
 
 
 //    public static void main(String[] args) {
