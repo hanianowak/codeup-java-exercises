@@ -1,6 +1,7 @@
 package util;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 //Create directory inside of src named util. Inside of util, create a class named Input that has a private property named scanner.
 //        When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class.
@@ -36,13 +37,6 @@ public class Input {
 
     }
 
-    public int getInt() {
-//        System.out.println("Enter integer");
-        int input = scanner.nextInt();
-        return input;
-
-    }
-
     double getDouble(double min, double max) {
         double input;
 
@@ -54,10 +48,29 @@ public class Input {
 
     }
 
+
+    
+    public int getInt() {
+        System.out.println("Enter integer");
+        try{
+        int input = scanner.nextInt();
+        return input;
+        } catch (InputMismatchException e) {
+            System.out.println("wrong nr type");
+            scanner.next();
+        }
+        return 0;
+    }
+
+
     public double getDouble() {
         System.out.println("Enter double");
-        double input = scanner.nextDouble();
-        return input;
-
+        try{
+            double input = scanner.nextDouble();
+            return input;
+        } catch (InputMismatchException e) {
+            System.out.println("wrong nr type");
+        }
+        return 0;
     }
 }
