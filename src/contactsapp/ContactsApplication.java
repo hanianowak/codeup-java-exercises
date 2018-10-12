@@ -1,4 +1,5 @@
 package contactsapp;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.IOException;
@@ -18,8 +19,7 @@ public class ContactsApplication {
                             "4. Delete an existing contact.\n" +
                             "5. Exit.\n" +
                             "Enter an option (1, 2, 3, 4 or 5)\n");
-            //        Scanner scanner = new Scanner(System.in);
-//        int choice = scanner.nextInt();
+
             Scanner input = new Scanner(System.in);
             int choice = input.nextInt();
             switch (choice) {

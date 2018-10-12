@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class GradesApplication {
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class GradesApplication {
         student1.addGrade(3);
         student1.addGrade(4);
         student1.addGrade(5);
-        
+
         ArrayList<Integer> grades2 = new ArrayList<>();
         Student student2 = new Student("Bob", grades2);
         student2.addGrade(4);
@@ -32,7 +32,7 @@ public class GradesApplication {
         student4.addGrade(3);
         student4.addGrade(6);
         student4.addGrade(4);
-        
+
         HashMap<String, Student> students = new HashMap<>();
 
         students.put("HaniaHania", student1);
@@ -66,6 +66,5 @@ public class GradesApplication {
             System.out.println("Would you like to see another student?");
             dec2 = scanner.next();
         } while (dec2.equals("yes"));
-
     }
 }

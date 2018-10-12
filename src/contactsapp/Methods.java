@@ -13,8 +13,12 @@ public class Methods {
 
     public static void showAll() {
         try {
-            System.out.println("Name | Phone number");
-            System.out.println("---------------");
+            String heading1 = "Name";
+            String heading2 = "Phone Number";
+
+            System.out.printf("%-10s %10s %n", heading1, heading2);
+
+            System.out.println("------------------------");
             List<String> contacts = Files.readAllLines(Paths.get("src/contactsapp/contacts.txt"));
 //            for (String line : contacts) {
 //                System.out.println(line);
@@ -40,11 +44,6 @@ public class Methods {
     public static void addContact() {
         Scanner scan = new Scanner(System.in);
         Path p = Paths.get("src/contactsapp", "contacts.txt");
-//        String input1;
-//        System.out.println("Enter the new contact:");
-//        input1 = scan.nextLine();
-//        List<String> contacts = new ArrayList<>();
-//        contacts.add(input1);
 
         String nameAdd;
         long numberAdd;
@@ -57,6 +56,8 @@ public class Methods {
         List<String> contacts = new ArrayList<>();
         contacts.add(nameAdd + " | " + numberAdd);
 
+        System.out.println("Contact has been added!");
+        System.out.println();
 
         try {
             Files.write(p, contacts, StandardOpenOption.APPEND);
@@ -74,12 +75,10 @@ public class Methods {
         try {
             List<String> lines = Files.readAllLines(Paths.get("src/contactsapp/contacts.txt"));
             for (String line : lines) {
-                if (line.contains(input2)) {
+                if (line.toLowerCase().contains(input2.toLowerCase())) {
                     System.out.println(line);
+                    System.out.println();
                 }
-                //            if (lines.isEmpty()) {
-//                System.out.println("Contact doesn't exist.");
-//            }
             }
         } catch (IOException e) {
             System.out.println("Exception");
@@ -98,12 +97,14 @@ public class Methods {
             List<String> nowe = new ArrayList<>();
             List<String> lines = Files.readAllLines(p);
             for (String line : lines) {
-                if (!line.contains(contactToDelete)) {
+                if (!line.toLowerCase().contains(contactToDelete.toLowerCase())) {
                     nowe.add(line);
                 }
             }
             Files.write(p, nowe, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
-            
+            System.out.println("That contact has been deleted!");
+            System.out.println();
+
         } catch (IOException e) {
             System.out.println("Exception");
             e.printStackTrace();

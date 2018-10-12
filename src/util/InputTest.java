@@ -5,16 +5,15 @@ public class InputTest {
 
         Input input = new Input();
 
-        System.out.println(input.getString());
-
-        System.out.println(input.yesNo());
-
-        System.out.println(input.getInt(4, 10));
+//        System.out.println(input.getString());
+//
+//        System.out.println(input.yesNo());
+//
+//        System.out.println(input.getInt(4, 10));
 
         System.out.println(input.getInt());
-
-        System.out.println(input.getDouble(3, 200));
-
+        //        System.out.println(input.getDouble(3, 200));
+//
         System.out.println(input.getDouble());
     }
 }

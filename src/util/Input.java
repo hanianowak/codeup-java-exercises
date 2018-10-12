@@ -6,6 +6,9 @@ import java.util.InputMismatchException;
 //Create directory inside of src named util. Inside of util, create a class named Input that has a private property named scanner.
 //        When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class.
 
+//class OutOfRangeExeption
+
+
 public class Input {
     private Scanner scanner;
 
@@ -73,4 +76,23 @@ public class Input {
         }
         return 0;
     }
-}
+
+
+    public double getDouble1(){
+        System.out.println("Enter double");
+        double input;
+        try {
+            input = Double.valueOf(getString());
+        }  catch (NumberFormatException e) {
+            System.out.println("not a number");
+            input = getDouble1();
+        }
+        return input;
+    }
+
+//    double getDouble2 (double min, double max) {
+//       zrobic
+//    }
+
+
+    }

@@ -1,4 +1,6 @@
 import sun.awt.geom.AreaOp;
+import util.Input;
+import java.util.InputMismatchException;
 
 public class Sandbox {
     public static void main(String[] args) {
@@ -9,7 +11,23 @@ public class Sandbox {
         System.out.println();
         for (int num:reverse(numbers)) System.out.print(num + " ");
         countUp(7);
+        System.out.println("");
+        boolean cos = sleepIn(true, false);
+        System.out.println(cos);
 
+
+
+// Java Exceptions and Error Handling
+        Input input = new Input();
+        System.out.println("enter an enteger");
+        try {
+            int num = input.getInt();
+            System.out.println(num);
+        } catch (InputMismatchException e){
+            System.out.println("not a valid num");
+        }
+        System.out.println("googbye");
+        
     }
 
 
@@ -49,6 +67,25 @@ public class Sandbox {
         }
         return backwards;
     }
+
+
+
+    public static boolean sleepIn(boolean weekday, boolean vacation){
+//        if (weekday&&vacation){
+//            return true;
+//        }
+//        if (weekday==true && vacation==false){
+//            return false;
+//        }
+//        if (weekday==false && vacation==true) {
+//            return true;
+//        } else
+//        return true;
+        return (!weekday||vacation);
+    }
+
+
+
 
 
 

@@ -1,6 +1,7 @@
-Hania Nowak | 2345678900
 John Doe | 3456789120
 Damian | 313249372
-Bob | 3233672323
-Tom | 32736234723
 Peggy Rote | 232322383
+Joe Cena | 372323423
+Anna Jolly | 2323211232
+Caro Emerald | 33324723
+Bob Dee | 2121212
